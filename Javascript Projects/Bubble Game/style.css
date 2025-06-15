@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #A66E38;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#panel {
+    overflow: hidden;
+    height: 80%;
+    width: 80%;
+    background-color: #96CEB4;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+#ptop {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    background-color: #FFAD60;
+    color: #333;
+    border-bottom: 2px solid #fff;
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #333;
+    min-width: 50px;
+    text-align: center;
+}
+
+#pbtm {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #96CEB4;
+}
+
+.bubble {
+    height: 50px;
+    width: 50px;
+    background-color: #FFEEAD;
+    border-radius: 50%;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+}
+
+.bubble:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.bubble.wrong {
+    animation: shake 0.3s;
+    background-color: #ff4d4d !important;
+    color: white;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#pbtm h1,
+#pbtm h2 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#restartBtn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ff8f25;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#restartBtn:hover {
+    background-color: #d87518;
+}
+
+#startScreen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.start-box {
+    background: #FFAD60;
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    /* border: 5px dotted white; */
+    outline: 3px dashed white;
+    /* outline-offset: 10px; */
+}
+
+.start-box h1 {
+    margin-bottom: 10px;
+}
+
+.start-box p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.start-box ul {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.start-box li {
+    margin-bottom: 3px;
+}
+
+#startBtn {
+    padding: 12px 25px;
+    background-color: #36954c89;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startBtn:hover {
+    background-color: #218837bd;
+}
+
+
+@media (max-width: 600px) {
+    #ptop {
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .bubble {
+        height: 35px;
+        width: 35px;
+        font-size: 14px;
+    }
+
+    #pbtm {
+        gap: 6px;
+        padding: 10px;
+    }
+}
