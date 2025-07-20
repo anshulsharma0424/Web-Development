@@ -41,5 +41,3 @@ A fun number-matching game built with **HTML**, **CSS**, and **JavaScript** to p
 ![image](https://github.com/user-attachments/assets/1af6c4a6-f74a-4773-a11a-2bef80f6738f)
 
 ![image](https://github.com/user-attachments/assets/47bed03c-15b4-4733-8c80-2f08ad8135ed)
-
----
